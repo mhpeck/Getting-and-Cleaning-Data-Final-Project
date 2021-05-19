@@ -69,4 +69,4 @@ data_tidy_grouped <- data_tidy %>% group_by(Subject, Activity)
 data_tidy_summarised <- data_tidy_grouped %>% summarise(across(.fns = mean))
 
   #export
-  write.table(data_tidy_summarised, "TidyData.txt")
+  write.table(data_tidy_summarised, "TidyData.txt", row.name = FALSE)
